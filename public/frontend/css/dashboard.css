@@ -1,0 +1,109 @@
+.wrapper{
+    max-height: 90vh;
+    overflow: none;
+    overflow-y: auto;
+    text-align: initial;
+    padding: 10px 2%;
+}
+.sign-txt a{
+    margin: 0px 8px;
+}
+.wrapper form{
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.wrapper form input{
+    border: none;
+    outline: none;
+    margin: 2px 0px;
+    padding: 8px 6px;
+    /* border-radius: 10px 0px 0px 10px; */
+    font-size: 18px;
+    box-shadow: 0px 0px 2px rgba(41, 185, 221,.9);
+}
+.wrapper form input:focus{
+    box-shadow: 0px 0px 4px rgba(41, 185, 221,.9);
+}
+.wrapper form #submitbtn{
+    background-color: rgb(91, 124, 224);
+    padding: 8px 12px;
+    /* border-radius: 0px 10px 10px 0px; */
+    box-shadow: 0px 0px 2px rgba(41, 185, 221,.9);
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+.wrapper form #submitbtn:active{
+    background-color: yellow;
+}
+.tasks{
+    position: relative;
+}
+.loader{
+    display: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 16px;
+    background-color: sienna;
+    color: white;
+    box-shadow: 0px 0px 8px rgb(65, 63, 63);
+    
+}
+#pending h4,#done h4{
+    margin: 5px 2px;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+#pending h4::before,#done h4::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom:0px;
+    left:0;
+    width: 100px;
+    height: 4px;
+    background-color: rgb(88, 149, 241);
+    
+}
+#pending ul,#done ul{
+    list-style-type: none;
+    padding: 8px 2px;
+}
+#pending ul li,#done ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 4px 0px;
+    box-shadow: 0px 0px 4px grey;
+    border-radius: 4px;
+
+    padding: 4px 2px;
+}
+#pending ul li span,#done ul li span{
+    display: inline-block;
+    overflow: hidden;
+    overflow-y: auto;
+}
+#pending ul li button,#done ul li button{
+    background-color: rgb(61, 158, 214);
+    border: none;
+    outline: none;
+    padding: 5px 6px;
+    color: white;
+    cursor: pointer;
+}
+.fa-trash-o{
+    font-size:18px;
+    padding:5px;
+    cursor: pointer;
+}
+.todobtn{
+    display: flex;
+    align-items: center;
+}
